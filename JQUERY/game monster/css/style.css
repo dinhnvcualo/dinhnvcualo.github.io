@@ -1,0 +1,79 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	color: white;
+	font-family: arial;
+}
+body{
+	margin-top: 30px;
+}
+.main{
+	position: relative;
+	width: 500px;
+	height: 500px;
+	border: solid 1px #0084bf;
+	margin: auto;
+	background-color: #000;
+}
+.menu_top{
+	position: relative;
+	width: 502px;
+	height: 50px;
+	background-color: #0084bf;
+	margin: auto;
+}
+.score{
+	position: absolute;
+	top: 12px;
+	left: 20px;
+	font-size: 20px;
+	color: white;
+}
+.boom_arr{
+	position: absolute;
+	top: 12px;
+	right: 30px;
+}
+.boom_arr img{
+	margin-left: 10px;
+}
+.menu_bottom{
+	position: relative;
+	width: 502px;
+	height: 50px;
+	background-color: #0084bf;
+	margin: auto;
+}
+.pause_img{
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+.restart_img{
+	position: absolute;
+	top: 10px;
+	left: 60px;
+}
+.heart_arr{
+	position: absolute;
+	top: 15px;
+	left: 100px;
+	display: flex;
+}
+.heart_arr img{padding-left: 10px;}
+.high_score{
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	font-size: 25px;
+	color: white;
+}
+#mon1, #mon2, #mon3, #mon4, #mon5, #mon6, #mon7, #mon8 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: url(../images/monster.png) center no-repeat;
+    z-index: 888;
+}
+
+

@@ -1,0 +1,245 @@
+*{margin:0px;}
+body{
+	background-color:black;
+	font-family: sans-serif;
+}
+a{
+	text-decoration:none;
+}
+.div_content{
+	width:1000px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:20px;
+	margin:0px auto;
+	display:flex;
+	background-color:#292728;
+	padding-bottom:20px;
+	border-bottom: dashed 1px white;
+}
+.div_content_left{
+	width:650px;
+}
+.div_news{
+	display:flex;
+	background:#ffffff url(../images/confidential-logo.gif) no-repeat bottom left;
+	padding-bottom:50px;
+}
+.div_new1{
+	width:325px;
+	border-right:dotted 1px black;
+}
+.div_new2{
+	border-right:none;
+}
+.div_new_title{
+	height:26px;
+	width:325;
+	background:url(../images/h2-confidential-heading-bg.gif);
+	font-weight:bold;
+	color:white;
+	line-height:25px;
+	padding-left:25px;
+}
+.div_new1 img{
+	padding-left:10px;
+	padding-top:5px;
+}
+.div_more_new{
+	background:url(../images/h3-confidential-showbuzz-bg.gif) no-repeat;
+	text-align:right;
+	padding-right:40px;
+	height:22px;
+	line-height:10px;
+}
+.div_more_rigth{
+	background:url(../images/h3-confidential-shootingstars-bg.gif) no-repeat;
+}
+.div_more_new a{
+	font-weight:bold;
+	font-size:12px;
+	color:black;
+}
+.div_text_new{
+	padding-left:10px;
+	font-size: 11px;
+}
+.div_text_new h3{
+	font-size: 11px;
+    font-weight: bold;
+	margin:0px;
+	padding-top:10px;
+}
+.div_movie{
+	margin-top:10px;
+	display:flex;
+}
+.div_movie_left{
+	width:315px;
+}
+.div_movie_left_top{
+	background:url(../images/h2-top-movie-trailers-bg.gif) repeat-x;
+	color:white;
+	height:27px;
+	font-weight:bold;
+	line-height:25px;
+	padding-left:10px;
+}
+.btn_click{
+	background:url(../images/list_movie_bg.png)repeat-x;
+	height:22px;
+	border:none;
+	border-bottom:solid 1px #bdbdbd;
+	font-size:15px;
+	font-weight:bold;
+	padding-left:10px;
+	width:100%;
+	padding:0px;
+	cursor:pointer;
+	text-align:left;
+	padding-left:10px;
+	color:#0189bb;
+	font-size: 14px;
+    line-height: 20px;
+}
+.btn_click:after{
+	content:url(../images/close.jpg);
+	float:right;
+	line-height:23px;
+}
+.btn_click_active:after{
+	content:url(../images/open.jpg);
+}
+.div_content_movie{
+	display:flex;
+	max-height:0px;
+	overflow:hidden;
+	background-color:white;
+}
+.div_content_movie img{
+	padding:10px;
+}
+.div_movie_info{
+	font-size:12px;
+	padding-right:20px;
+}
+.div_movie_info b:after{
+	content: url(../images/icon_1.png);
+    float: left;
+}
+.div_now_showing{
+	display:flex;
+	padding:5px;
+	background-color:white;
+	font-size: 12px;
+    font-weight: bold;
+	line-height:22px;
+}
+.div_now_showing select{
+	width: 200px;
+    height: 19px;
+}
+.div_movie_right{
+	width:315px;
+	margin-left:20px;
+	background-color:white;
+}
+.div_movie_rigth_top{
+	background:url(../images/top-movie-bg.png) repeat-x;
+	height:27px;
+	color:white;
+	font-weight:bold;
+	line-height:25px;
+	padding-left:10px;
+}
+.div_item_movie{
+	padding:5px 10px 5px 10px;
+}
+.div_item_top{
+	background:url(../images/start_2.png) no-repeat right;
+	font-size: 15px;
+    font-weight: bold;
+    color: #0189bb;
+	padding-left:10px;
+	padding-bottom: 10px;
+}
+.div_item_content{
+	display:flex;
+	padding-bottom: 10px;
+}
+.div_item_content span{
+	margin-left: 10px;
+    font-size: 13px;
+}
+.div_item_movie a:before{
+	content:url(../images/icon_1.png);
+	float:left;
+}
+.div_item_movie a{
+	font-size:12px;
+	font-weight:bold;
+	color:#0189bb;
+}
+.div_item_top1{
+	background:url(../images/start_1.png) no-repeat right;
+}
+.div_content_rigth{
+	width:350px;
+	padding-left:30px;
+	padding-top:26px;
+}
+.div_entertaiment input{
+	margin-left: 15px;
+    width: 140px;
+    height: 15px;
+}
+.div_entertaiment input:after{
+	content:url(../images/search_button.png);
+	float:left;
+}
+.div_footer{
+	text-align:center;
+	margin: 0 auto;
+	width:1010px;
+	background-color:#292728;
+}
+.div_footer ul{
+	background: #292728;
+    list-style: none;
+    text-align: center;
+	padding: 12px 30px;
+}
+.div_footer li{
+	display: inline-block;
+	margin-right:50px;
+}
+
+.div_footer a{
+    display: block;
+    color: white;
+    font-size: 14px;
+}
+.div_footer_link{
+	background: white;
+    color: #2196F3;
+	padding: 10px;
+}
+.div_link_web{
+	display:flex;
+	padding-left:100px;
+}
+.div_link_web a{
+	font-size: 12px;
+    text-decoration: none;
+	color: #398fda;
+}
+.a_top{
+	margin-left:50px;
+}
+.div_copyright{
+	font-size:12px;
+}
+
+
+
+

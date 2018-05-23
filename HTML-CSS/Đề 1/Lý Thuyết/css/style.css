@@ -1,0 +1,66 @@
+*{
+	font-family: Georgia,"Times New Roman", Times, serif;
+}
+#div_main{
+	width:500px;
+	border: solid 1px #0033ff;
+}
+.player_profile_title{
+	background:url(../images/title_bg.gif) repeat-x;
+	height:25px;
+	font-weight:bold;
+}
+.div_profile_info{
+	height:100px;
+	display:flex;
+}
+.ul_player_info{
+	margin-left:15px;
+	overflow:scroll;
+	width:100%;
+	list-style:none;
+	height:100px;
+}
+.ul_facts{
+	list-style:none;
+	padding-left:60px;
+}
+.div_facts ul li:before{
+	content:url('../images/star.png');
+	margin-right:4px;
+}
+.div_post{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+.div_post_detail{
+	background-color:#ececec;
+	position:relative;
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:20px;
+}
+.div_post_after{
+	background:url("../images/comment.png");
+	position:absolute;
+	width:25px;
+	height:20px;
+	top:100%;
+	left:20px;
+}
+.div_posted_detail{
+	position:absolute;
+	top:100%;
+	left:55px;
+}
+.div_posted_detail a{
+	text-decoration:none;
+	color:#0c35f1;
+}
+.div_comment{
+	margin-top:20px;
+}
+.div_comment h4{
+	text-align:center;
+	font-size:17px;
+}

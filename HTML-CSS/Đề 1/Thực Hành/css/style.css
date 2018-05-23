@@ -1,0 +1,88 @@
+body{
+	background-color:#2D2F35;
+	font-family:Verdana, "Arial", Helvetica, sans-serif;
+	margin:0px;
+	padding:0px;
+	
+}
+.div_header{
+	height:110px;
+	width:100%;
+}
+.div_ourproduct{
+	position:relative;
+	height:300px;
+	padding-left:10%;
+	padding-right:10%;
+	background:url(../images/bg_home_intro.gif) repeat-x;
+	border-bottom:solid 1px #474a51;
+	border-top:solid 1px #474a51;
+}
+h3{
+	color:#ffff00;
+}
+.div_ourproduct h3{
+	margin-bottom:20px;
+	font-size:23px;
+}
+.div_ourproduct_text{
+	position:absolute;
+	bottom:62px;
+	width:400px;
+	color:white;
+	font-size:13px;
+	float:left;
+}
+.div_listimage{
+	height:145px;
+	width:100%;
+	border-bottom:solid 1px #474a51;
+}
+.div_listimage ul{
+	list-style:none;
+	padding:0px;
+	margin-left:200px;
+	padding-top:20px;
+}
+.div_listimage li{
+	position:relative;
+	display:inline-block;
+	padding-left:15px;
+}
+.div_listimage .img_number_icon{
+	position:absolute;
+	right:2px;
+	bottom:73px;
+}
+.div_text{
+	height:380px;
+	width:100%;
+	border-bottom:solid 1px #474a51;
+	color:white;
+	font-size:13px;
+}
+.div_email{
+	width:400px;
+	float:left;
+	margin-left:200px;
+	background:url(../images/home_services_bg_design.gif) no-repeat right bottom;
+}
+.div_email h3{
+	margin:0px;
+	padding:0px;
+	font-size:18px;
+}
+.div_messenger{
+	width:400px;
+	float:right;
+	margin-right:200px;
+	background:url(../images/home_services_bg_marketing.gif) no-repeat;
+}
+.div_footer{
+	height:120px;
+	width:100%;
+	color:white;
+	font-size:13px;
+	text-align:center;
+	background:url(../images/bg_footer.gif)
+}

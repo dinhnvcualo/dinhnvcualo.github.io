@@ -1,0 +1,132 @@
+*{
+	padding:0px;
+	margin:0px;
+	font-family:sans-serif;
+}
+.header{
+	position:relative;
+	width:1000px;
+	height:349px;
+	background:url(../images/fill_header.jpg) no-repeat;
+	margin:0px auto;
+}
+.logo{
+	position:absolute;
+	top:53px;
+	left:50px;
+	background:url(../images/logo.jpg) no-repeat;
+	width:353px;
+	height:116px;
+}
+.logo h1{
+	margin-left: 90px;
+    margin-top: 50px;
+	font-size:40px;
+}
+.logo span{
+	color:#595959;
+}
+.content{
+	position:relative;
+	width:1000px;
+	margin:0px auto;
+	background-color:#121212;
+}
+.menu{
+	position: absolute;
+    padding-left: 50px;
+    top: -158px;
+	display:flex;
+}
+.menu a{
+	text-decoration: none;
+    color: white;
+	padding-left:5px;
+}
+.menu span{
+	padding-left:50px;
+}
+.content_detail{
+	display:flex;
+	padding-left: 60px;
+    padding-top: 20px;
+}
+.detail_left{
+	width:240px;
+	height:320px;
+	background-color:#1f1f1f;
+	padding:40px 30px;
+	color:#595959;
+}
+.box_text{
+	border-top:solid 1px #7e7e7e;
+	padding:25px 10px 70px 10px;
+	font-size:13px;
+}
+.box_list{
+	padding-top:30px;
+	border-top:solid 1px #2c2c2c;
+}
+.box_list ul{
+	list-style:none;
+}
+.box_list a{
+	color:#595959;
+	font-size:11px;
+}
+.box_list li:before{
+	content:url(../images/list_bg.png);
+	margin-right:5px;
+}
+.box_list li{
+	padding-left:20px;
+	padding-bottom:10px;
+}
+.detail_right{
+	margin-left:40px;
+	padding-top:40px;
+}
+.box_web{
+	width:394px;
+	padding-left:10px;
+	padding-top:20px;
+}
+.box_web{
+	font-size:12px;
+	color:#595959;
+}
+.box_web img{
+	padding-bottom:10px;
+}
+.box_link{
+	margin-top:10px;
+	padding-bottom:10px;
+	border-top:dotted 1px #323232;
+}
+.more_info{
+	padding: 15px 0px;
+    color: #ffffdc;
+    text-decoration: none;
+    display: block;
+    line-height: 10px;
+	font-size:11px;
+}
+.more_info:before{
+	content: url(../images/arr_1.gif);
+    margin-right: 4px;
+    float: left;
+}
+.footer{
+	width:744px;
+	margin-top:40px;
+	margin-left:60px;
+	border-top:dotted 1px #323232;
+	padding-left:10px;
+	padding-top:25px;
+	padding-bottom:60px;
+	font-size:11px;
+	color:#595959;
+}
+.footer a{
+	color:#595959;
+}

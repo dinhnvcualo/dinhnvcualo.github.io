@@ -1,0 +1,63 @@
+
+.input_style{
+	background: white url(../images/icon.jpg) no-repeat right;
+	background-position: 180px;
+	border: 1px solid green;
+}
+.box_content{
+	position: absolute;
+	left: 220px;
+	top: 130px;
+	width: 405px;
+	background-color: #2c2c2c;
+	color: white;
+	padding-top: 10px;
+}
+.box_content tr{
+	padding-bottom: 5px;
+}
+.box_content th{
+	width: 57px;
+}
+.title{
+	background-color: #0084bf;
+	line-height: 10px;
+}
+table br th{
+	line-height: 10px;
+	height: 25px;
+}
+table{
+	border: solid 1px white;
+	border-collapse: collapse;
+}
+.div_sel{
+	display: flex;
+}
+.m_sel{
+	width: 100px;
+	height: 25px;
+	color: white;
+	background-color: black;
+}
+.y_sel{
+	width: 70px;
+	height: 25px;
+	color: white;
+	background-color: black;
+	margin-left: 5px;
+}
+.td_current{
+	background-color: red;
+}
+table td{
+	text-align: center;
+	height: 30px;
+}
+.tr_clear{
+	cursor: pointer;
+}
+.td_none{
+	color: #2c2c2c;
+	border:solid 1px aliceblue;
+}

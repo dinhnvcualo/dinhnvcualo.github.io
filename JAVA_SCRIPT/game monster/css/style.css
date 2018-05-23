@@ -1,0 +1,13 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	color: white;
+}
+body{
+	padding: 30px;
+}
+.content{
+	width: 500px;
+	margin: 0px auto;
+	background-color: black;
+}

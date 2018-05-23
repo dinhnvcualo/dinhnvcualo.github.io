@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+    <title>SLIDER</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/slider.js" ></script>
+	<script src="js/minjs.js" ></script>
+  </head>
+  <body>
+  	<div id="main" class="main">
+  		<div class="content" id="content">
+        <img id="img_select" src="images/messi.jpg">
+        <a id="pre" class="pre" onclick="pre_click();" ><img src="images/pre.png"></a>
+        <a id="next" class="next" onclick="next_click();"><img src="images/next.png"></a>
+        <div class="caption" id="caption">1 OF 3: Lionel Messi</div>  
+      </div>
+  	</div>
+    <div id="index_view" class="index_view">
+      <a id="active_1" class="active" href="#" onclick="indexclick(this.id);">1</a> 
+      <a id="active_2" href="#" onclick="indexclick(this.id);">2</a> 
+      <a id="active_3" href="#" onclick="indexclick(this.id);">3</a>
+    </div>
+  </body>
+</html>

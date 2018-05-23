@@ -1,0 +1,60 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.main{
+	position: relative;
+	border: solid 1px #2c2c2c;
+	padding: 20px;
+	width: 600px;
+	height: 150px;
+	margin: 30px auto;
+}
+.item1, .item2, .item3, .item4{
+	position: relative;
+	width: 100%;
+	height: 30px;
+}
+.item1 span, .item2 span, .item3 span, .item4 span{
+	position: absolute;
+	width: 130px;
+	left: 0px;
+	top: 0px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.item1 input, .item2 input, .item3 input, .item4 input{
+	position: absolute;
+	width: 200px;
+	left: 130px;
+	top: 0px;
+	padding-left: 5px;
+}
+.item_submit{
+	padding-left: 130px;
+}
+.item_submit button{
+	width: 103px;
+	font-weight: bold;
+}
+.err_text{
+	position: absolute;
+	width: auto;
+	left: 350px;
+	top: 0px;
+	color: red;
+	font-size: 13px;
+	font-style: italic;
+    font-weight: bold;
+}
+.result{
+	position: absolute;
+	width: auto;
+	bottom: 5px;
+    left: 150px;
+	color: red;
+	font-size: 13px;
+	font-style: italic;
+    font-weight: bold;
+}
+

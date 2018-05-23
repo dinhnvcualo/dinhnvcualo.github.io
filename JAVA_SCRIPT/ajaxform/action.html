@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+    <title>FORM AJAX</title>
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calendar_style.css">
+	<script src="js/ajaxform.js" ></script>
+  <script src="js/calendar.js" ></script>
+  <script src="js/minjs.js" ></script>
+  </head>
+  <body>
+  	<div class="main" id="main">
+     <form id="ajaxform" name="ajaxform" method="post">
+       <div class="item1">
+         <span>USER NAME: </span>
+         <input type="text" id="txtname" name="txtname">
+       </div>
+       <div class="item2">
+         <span>PASSWORD: </span>
+         <input type="password" id="txtpass" name="txtpass">
+       </div>
+       <div class="item3">
+         <span>EMAIL: </span>
+         <input type="text" id="txtmail" name="txtmail">
+       </div>
+       <div class="item4">
+         <span>DATE OF BIRTH: </span>
+         <input type="text" id="txtdate" name="txtdate" class="input_style" onclick="show();" >
+       </div>
+       <div class="item_submit">
+         <button type="button" id="btn_submit" onclick="click_ajax();" >SUBMIT</button>
+         <button type="button" id="btn_reset">RESET</button>
+       </div>
+     </form> 
+    </div>
+  </body>
+</html>

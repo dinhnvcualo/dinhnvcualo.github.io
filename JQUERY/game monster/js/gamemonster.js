@@ -4,10 +4,10 @@ Project: CALENDAR
 */
 $(document).ready(function(){
 	var monster1 = {
-	initX:0,
-	initY:0,
-	toX:100,
-	toY:100
+		initX:0,
+		initY:0,
+		toX:100,
+		toY:100
 	};
 	var monster2 = {
 		initX:200,
@@ -122,35 +122,194 @@ $(document).ready(function(){
 	var boomNum=0;
 	var boomNumMax=7;
 	var heart=3;
+	var endGame=false;
+	var highscore=0;
+	var deleteBoom=3;
 	//BOOM CLICK
 	$("#boomlist > img").click(function(){
-		alert("click boom");
+		deleteBoom--;
+		boomClick();
 	});
+	function boomClick(){
+		if (running) {
+			//DELETE BOOM IMAGE
+			$("#boomlist > img").remove();
+			for (var i = 0; i < deleteBoom; i++) {
+				var img=$("<img>");
+				img.attr("src","images/bomb-512.png");
+				$("#boomlist").append(img);
+				img.click(function(){
+					deleteBoom--;
+					boomClick();
+				});
+			}
+			//KILL ALL MONSTER
+			killAllMonster();
+		}
+	}
+	function killAllMonster(){
+		var count=0;
+		if (mon1.is(":visible")) {
+			var x=mon1.position();
+			showBoom(x.left+50,x.top+50);
+			setTimeout(function() {
+				mon1.finish();
+			},1);
+			count++;
+		}
+		if (mon2.is(":visible")) {
+			var x=mon2.position();
+			showBoom(x.left+50,x.top+50);
+			setTimeout(function() {
+				mon2.finish();
+			},1);
+			count++;
+		}
+		if (mon3.is(":visible")) {
+			var x=mon3.position();
+			showBoom(x.left+50,x.top+50);
+			setTimeout(function() {
+				mon3.finish();
+			},1);
+			count++;
+		}
+		if (mon4.is(":visible")) {
+			var x=mon4.position();
+			showBoom(x.left+50,x.top+50);
+			setTimeout(function() {
+				mon4.finish();
+			},1);
+			count++;
+		}
+		if (mon5.is(":visible")) {
+			var x=mon5.position();
+			showBoom(x.left+50,x.top+50);
+			setTimeout(function() {
+				mon5.finish();
+			},1);
+			count++;
+		}
+		if (mon6.is(":visible")) {
+			var x=mon6.position();
+			showBoom(x.left+50,x.top+50);
+			setTimeout(function() {
+				mon6.finish();
+			},1);
+			count++;
+		}
+		if (mon7.is(":visible")) {
+			var x=mon7.position();
+			showBoom(x.left+50,x.top+50);
+			setTimeout(function() {
+				mon7.finish();
+			},1);
+			count++;
+		}
+		if (mon8.is(":visible")) {
+			var x=mon8.position();
+			showBoom(x.left+50,x.top+50);
+			setTimeout(function() {
+				mon8.finish();
+			},1);
+			count++;
+		}
+		score+=(count*10);
+		updateScore();
+	}
 	//PAUSE CLICK
 	$(".pause_img").click(function(){
-		running=false;
-		stopMonster();
-		updateText("PAUSE GAME");
+		if (!endGame) {
+			running=!running;
+			if (!running) {
+				stopMonster();
+				updateText("PAUSE GAME");
+			}else{
+				clearText();
+				resumeGame();
+				main();
+			}
+		}
 	});
+	//HIGH SCORE
+	if (sessionStorage.getItem("highscore")==null) {
+		sessionStorage.setItem("highscore",0);
+	}else{
+		highscore=sessionStorage.getItem("highscore");
+	}
+	//RESUME GAME
+	function resumeGame(){
+		if (mon1.is(":visible")) {mon1.resume();}
+		if (mon2.is(":visible")) {mon2.resume();}
+		if (mon3.is(":visible")) {mon3.resume();}
+		if (mon4.is(":visible")) {mon4.resume();}
+		if (mon5.is(":visible")) {mon5.resume();}
+		if (mon6.is(":visible")) {mon6.resume();}
+		if (mon7.is(":visible")) {mon7.resume();}
+		if (mon8.is(":visible")) {mon8.resume();}
+	}
 	//RESTART CLICK
 	$(".restart_img").click(function(){
-		alert("RESTART GAME");
+		speed=1000;
+		running=true;
+		score=0;
+		level=1;
+		boomNum=0;
+		heart=3;
+		endGame=false;
+		deleteBoom=3;
+		updateHeart();
+		updateScore();
+		updateBoomTop();
+		clearBoom();
+		initMonster();
+		clearText();
+		main();
 	});
+	function updateBoomTop(){
+		boomClick();
+	}
+	function initMonster(){
+		setInitMonster(mon1,monster1);
+		setInitMonster(mon2,monster2);
+		setInitMonster(mon3,monster3);
+		setInitMonster(mon4,monster4);
+		setInitMonster(mon5,monster5);
+		setInitMonster(mon6,monster6);
+		setInitMonster(mon7,monster7);
+		setInitMonster(mon8,monster8);
+	}
+	function setInitMonster(mon,monster){
+		mon.css({
+			left: monster.initX+'px',
+			top: monster.initY+'px'
+		});
+		if (mon!== mon1) {
+			mon.hide();
+		}
+	}
 	//MAIN GAME CLICK
 	$("#main_game").click(function(){
-		heart--;
-		updateHeart();
-		if (heart<=0) {
-			gameOver();
+		if (running) {
+			heart--;
+			updateHeart();
+			if (heart<=0) {
+				gameOver();
+			}
 		}
 	});
 	function gameOver(){
 		running=false;
+		if (score>parseInt(sessionStorage.getItem("highscore"))) {
+			sessionStorage.setItem("highscore",score);
+		}
 		stopMonster();
 		updateHighScore();
 		updateText("GAME OVER");
+		endGame=true;
 	}
-	function updateHighScore(){}
+	function updateHighScore(){
+		$(".high_score").html("HIGH SCORE: "+sessionStorage.getItem("highscore"));
+	}
 	function updateText(text){
 		var span=$("<span>");
 		span.css({
@@ -163,15 +322,18 @@ $(document).ready(function(){
 		span.html(text);
 		$("#main_game").append(span);
 	};
+	function clearText(){
+		$("#main_game > span").remove();
+	}
 	function stopMonster(){
-		if (mon1.is(":visible")) {mon1.stop();}
-		if (mon2.is(":visible")) {mon2.stop();}
-		if (mon3.is(":visible")) {mon3.stop();}
-		if (mon4.is(":visible")) {mon4.stop();}
-		if (mon5.is(":visible")) {mon5.stop();}
-		if (mon6.is(":visible")) {mon6.stop();}
-		if (mon7.is(":visible")) {mon7.stop();}
-		if (mon8.is(":visible")) {mon8.stop();}
+		if (mon1.is(":visible")) {mon1.pause();}
+		if (mon2.is(":visible")) {mon2.pause();}
+		if (mon3.is(":visible")) {mon3.pause();}
+		if (mon4.is(":visible")) {mon4.pause();}
+		if (mon5.is(":visible")) {mon5.pause();}
+		if (mon6.is(":visible")) {mon6.pause();}
+		if (mon7.is(":visible")) {mon7.pause();}
+		if (mon8.is(":visible")) {mon8.pause();}
 	}
 	function moveMonster(mon,monsterInit){
 		if (running) {
@@ -184,6 +346,7 @@ $(document).ready(function(){
 					"top":monsterInit.initY+'px'
 				},speed,function(){
 					mon.hide();
+					mon.isvisible=false;
 					if (score%100==0 && score>0) {
 						level++;
 						speed-=200;
@@ -290,6 +453,9 @@ $(document).ready(function(){
 			$("#main_game").append(boomImg);
 		}
 	}
+	function clearBoom(){
+		$("#main_game >img").remove();
+	}
 	function getAllVisibleMonster(){
 		var count=0;
 		if (mon1.is(":visible")) {count++}
@@ -306,9 +472,7 @@ $(document).ready(function(){
 		scoreText.html("SCORE: "+score);
 	}
 	function main(){
-		if (running) {
-			moveMonster(mon1,monster1);
-		}
+		moveMonster(mon1,monster1);
 	}
 	main();					
 });

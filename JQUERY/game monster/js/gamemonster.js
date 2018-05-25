@@ -66,49 +66,50 @@ $(document).ready(function(){
 	var mon7 = $("#mon7");
 	var mon8 = $("#mon8");
 	//BEGIN MONSTER CLICK EVENT
-	mon1.click(function(e){
+
+	mon1.on('touchstart click', function(e){
 		onClickMonster(mon1);
 		var x=e.pageX-offset.left;
 		var y=e.pageY-offset.top;
 		showBoom(x,y);
 	});
-	mon2.click(function(e){
+	mon2.on('touchstart click', function(e){
 		onClickMonster(mon2);
 		var x=e.pageX-offset.left;
 		var y=e.pageY-offset.top;
 		showBoom(x,y);
 	});
-	mon3.click(function(e){
+	mon3.on('touchstart click', function(e){
 		onClickMonster(mon3);
 		var x=e.pageX-offset.left;
 		var y=e.pageY-offset.top;
 		showBoom(x,y);
 	});
-	mon4.click(function(e){
+	mon4.on('touchstart click', function(e){
 		onClickMonster(mon4);
 		var x=e.pageX-offset.left;
 		var y=e.pageY-offset.top;
 		showBoom(x,y);
 	});
-	mon5.click(function(e){
+	mon5.on('touchstart click', function(e){
 		onClickMonster(mon5);
 		var x=e.pageX-offset.left;
 		var y=e.pageY-offset.top;
 		showBoom(x,y);
 	});
-	mon6.click(function(e){
+	mon6.on('touchstart click', function(e){
 		onClickMonster(mon6);
 		var x=e.pageX-offset.left;
 		var y=e.pageY-offset.top;
 		showBoom(x,y);
 	});
-	mon7.click(function(e){
+	mon7.on('touchstart click', function(e){
 		onClickMonster(mon7);
 		var x=e.pageX-offset.left;
 		var y=e.pageY-offset.top;
 		showBoom(x,y);
 	});
-	mon8.click(function(e){
+	mon8.on('touchstart click', function(e){
 		onClickMonster(mon8);
 		var x=e.pageX-offset.left;
 		var y=e.pageY-offset.top;

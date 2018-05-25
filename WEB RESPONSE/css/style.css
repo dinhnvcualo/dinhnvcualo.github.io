@@ -11,7 +11,7 @@ body {
 div.header{
 	position: relative;
 	width: 100%;
-	display: block;
+	display: inline-block;
 	height: auto;
 	border-top: solid 4px #f0831e;
 	float: left;

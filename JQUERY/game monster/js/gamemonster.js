@@ -288,7 +288,7 @@ $(document).ready(function(){
 		}
 	}
 	//MAIN GAME CLICK
-	$("#main_game").click(function(){
+	$(element).on('touchstart click', function(){
 		if (running) {
 			heart--;
 			updateHeart();
@@ -297,6 +297,7 @@ $(document).ready(function(){
 			}
 		}
 	});
+	
 	function gameOver(){
 		running=false;
 		if (score>parseInt(sessionStorage.getItem("highscore"))) {

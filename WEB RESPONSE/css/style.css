@@ -34,6 +34,10 @@ h1{
 a.header_logo_left{
 	float: left;
 	margin-top: 10px;
+	max-width:430px;
+	width:100%;
+	*width:430px;
+	height:99px;
 }
 .header_logo_right{
 	float: right;

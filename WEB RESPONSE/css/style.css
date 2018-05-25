@@ -14,7 +14,9 @@ div.header{
 	display: inline-block;
 	height: auto;
 	border-top: solid 4px #f0831e;
+	margin: 0 auto;
 	float: left;
+	z-index: 200;
 }
 div.center{
 	min-width: 960px;

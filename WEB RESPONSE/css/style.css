@@ -34,8 +34,7 @@ a.header_logo_left{
 	float: left;
 	margin-top: 10px;
 }
-div.header_logo_right{
+.header_logo_right{
 	float: right;
-	margin-top: 10px;
 	text-align: right;
 }

@@ -1,6 +1,6 @@
 /*
 Author: NGUYEN VAN DINH
-Project: CALENDAR
+Project: GAME MONSTER
 */
 $(document).ready(function(){
 	var monster1 = {

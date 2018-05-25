@@ -288,7 +288,7 @@ $(document).ready(function(){
 		}
 	}
 	//MAIN GAME CLICK
-	$(element).on('touchstart click', function(){
+	$("#main_game").on('touchstart click', function(){
 		if (running) {
 			heart--;
 			updateHeart();

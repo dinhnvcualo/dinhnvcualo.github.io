@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+caption{font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a{ text-decoration:none; font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo, sans-serif;}
+a img {border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+
+body {
+    color: #73523f;
+    font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
+    font-size: 13px;
+	background:#fff;
+}
+p{
+	line-height:1.6;
+	}
+.clear_fix{
+	clear:both;
+}
+.phone_sp{
+	display:none;
+	}
+img.aside_button:hover,
+p.page_top a img:hover,
+img.aside_img_3:hover,
+img.aside_img_2:hover,
+div.box_1 a img:hover,
+a.img_button_2 img:hover,.btSli7 a:hover
+{
+    opacity:0.6;
+	filter:alpha(opacity=60); 
+}
+div.header{
+	width:100%;
+	height:auto;
+	display:inline-block;
+	margin:0 auto;
+	position:relative;
+	z-index:200;
+	border-top:4px solid #f0831e;
+	float:left;
+	}
+div.inner {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+	height:auto;
+	display:block;
+	min-width:960px;
+	max-width:960px;
+	position:relative;
+	clear:both;
+}	
+h1{
+	font-size:12px;
+	text-align:left;
+	color:#66402b;
+	width:100%;
+	display:inline-block;
+	margin:10px 0;
+	}
+img.header_logo{
+	float:left;
+	max-width:430px;
+	width:100%;
+	*width:430px;
+	height:99px;
+	margin-top:10px;
+	}	
+div.header_info{
+	float:right;
+	max-width:270px;
+	width:100%;
+	height:auto;
+	margin-top:0px;
+	display:inline-block;
+	font-size:12px;
+	text-align:right;
+	}
